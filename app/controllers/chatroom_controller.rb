@@ -3,7 +3,7 @@ class ChatroomController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = Message.all
+    @messages = Message.custom_display # calls the scope from the Message model which filters the last 20 messages for display to avoid excess data
   end
 
 end
